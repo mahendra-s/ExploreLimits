@@ -20,7 +20,7 @@ class Pipeline:
             "set": {
                 "field": key,
                 "value": value,
-                "if": {"id": "my-prod-tag-script"}
+                # "if": {"id": "my-prod-tag-script"}
             }
         }
 
@@ -41,4 +41,4 @@ class Pipeline:
 
 if __name__ == "__main__":
     service = Pipeline()
-    service.create_pipe(name="mysetup", set={"field1": "value1"})
+    service.create_pipe(name="default-pipeline", set={"field1": "value1"})
